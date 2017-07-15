@@ -37,8 +37,7 @@ Addon provides three API for measuring the performance of a given period.
 ```js
     this.get('metrics').start('accounts_page');
     Ember.run.scheduleOnce('afterRender', () => {
-      this.get('metrics').end('accounts_page');
-      let accountsPageRenderDuration = this.get('metrics').measure('accounts_page');
+      let accountsPageRenderDuration = this.get('metrics').end('accounts_page');
       console.log(accountsPageRenderDuration); // will return the duration to for this render performance in milliseconds.
     });
 ```
