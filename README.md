@@ -1,6 +1,6 @@
 # ember-appmetrics 🐹
 
-[![Build Status](https://travis-ci.org/gokatz/ember-appmetrics.svg?branch=master)](https://travis-ci.org/gokatz/ember-appmetrics)
+[![Build Status](https://travis-ci.org/gokatz/ember-appmetrics.svg?branch=master)](https://travis-ci.org/gokatz/ember-appmetrics) [![Ember Observer Score](https://emberobserver.com/badges/ember-appmetrics.svg)](https://emberobserver.com/addons/ember-appmetrics) 
 
 Ember library used to measure various metrics in your Ember app with ultra simple APIs. Especially useful for [RUM](https://en.wikipedia.org/wiki/Real_user_monitoring) in Ember SPAs.
 
