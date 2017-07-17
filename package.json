@@ -3,7 +3,14 @@
   "version": "1.0.1",
   "description": "Ember library used to measure various metrics in your Ember app with ultra simple APIs. Especially useful for RUM in Ember SPA.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "performance-metrics",
+    "rum",
+    "performance-analysis",
+    "appmetrics",
+    "performance-monitoring",
+    "timeline-marking",
+    "real-user-monitoring"
   ],
   "license": "MIT",
   "author": "Gokul Kathirvel (@_gokatz)",
