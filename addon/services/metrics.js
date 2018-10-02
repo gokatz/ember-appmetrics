@@ -1,23 +1,25 @@
-import Ember from 'ember';
-
-const { typeOf, Service } = Ember;
+import { typeOf } from '@ember/utils';
+import Service from '@ember/service';
 
 export default Service.extend({
   isMarkSupportedBrowser: true,
   isNowSupportedBrowser: true,
 
-  secondaryPerformanceObj: {},
-  metricsObj: {},
-
   init() {
-
+    this._super(...arguments);
+    this.setProperties({
+      secondaryPerformanceObj: {},
+      metricsObj: {}
+    });
     // detecting the browser's Compatibility over window.performance.mark and window.performance.now
 
     if (!(window.performance && window.performance.mark)) {
+      // eslint-disable-next-line no-console
       console.warn('Performance.mark is not supported in this browser. Hence falling back to performance.now()');
       this.set('isMarkSupportedBrowser', false);
 
       if (!(window.performance && window.performance.now)) {
+        // eslint-disable-next-line no-console
         console.warn('Performance.now is also not supported. Hence falling back to javascript Date API');
         this.set('isNowSupportedBrowser', false);
       }
@@ -27,6 +29,7 @@ export default Service.extend({
   start(eventName) {
 
     if (typeOf(eventName) !== 'string') {
+      // eslint-disable-next-line no-console
       console.error('Expected type String for invoking `start`');
       return -1;
     }
@@ -52,6 +55,7 @@ export default Service.extend({
   end(eventName) {
 
     if (typeOf(eventName) !== 'string') {
+      // eslint-disable-next-line no-console
       console.error('Expected type String for invoking `end`');
       return -1;
     }
@@ -89,6 +93,7 @@ export default Service.extend({
 
   measure(eventName) {
     if (typeOf(eventName) !== 'string') {
+      // eslint-disable-next-line no-console
       console.error('Expected type String for invoking `measure`');
       return -1;
     }

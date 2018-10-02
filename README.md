@@ -1,8 +1,10 @@
 # ember-appmetrics 🐹
+==============================================================================
 
 [![Build Status](https://travis-ci.org/gokatz/ember-appmetrics.svg?branch=master)](https://travis-ci.org/gokatz/ember-appmetrics)
 
 Ember library used to measure various metrics in your Ember app with ultra simple APIs. Especially useful for [RUM](https://en.wikipedia.org/wiki/Real_user_monitoring) in Ember SPAs.
+------------------------------------------------------------------------------
 
 ## Installation  💻
 For Ember CLI >= `0.2.3`:
@@ -52,24 +54,29 @@ PS: In Safari, the User Timing API (performance.mark()) is not available, so the
 
 * `git clone` this repository
 * `npm install`
-* `bower install`
 
 ## Running 👟👟
 
 * `ember server`
 * Visit your app at http://localhost:4301.
+* `npm run lint:js -- --fix`
 
 ## Running Tests 💉
 
-* `ember test`
-* `ember test --server`
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
 
-## Building
+### Running the dummy application
 
-* `ember build`
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
 ## Contribution 👨‍👧‍👦
 
 Missing something? Let's work together to get that done 😉
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
